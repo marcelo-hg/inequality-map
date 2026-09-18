@@ -1,0 +1,6 @@
+reference_countries: [BRA, USA, FRA, CHN, NOR, IND, NGA]
+overrides:
+  wid:
+    KS: {iso3: XKX, iso2: XK, name: Kosovo, code_status: user_assigned}
+  world_bank:
+    XKX: {iso3: XKX, iso2: XK, name: Kosovo, code_status: user_assigned}

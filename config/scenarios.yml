@@ -1,0 +1,89 @@
+hard_equality:
+  name: Hard Equal-Earth
+  description: Every adult receives the source-derived Equal-Earth reference income.
+  redistribution:
+    type: equal
+    target_multiplier: 1.0
+  classification:
+    unchanged_tolerance: 0.0
+  population:
+    basis: adult_20_plus
+  year:
+    target: null  # The CLI resolves and records the latest year with validated distributions.
+
+relaxed_06_30:
+  name: Relaxed Equal-Earth (0.6E–3E)
+  description: Diagnostic floor-and-ceiling clamp; it does not promise budget balance.
+  redistribution:
+    type: clamp
+    floor_multiplier: 0.6
+    ceiling_multiplier: 3.0
+  classification:
+    unchanged_tolerance: 0.0
+  population:
+    basis: adult_20_plus
+  year:
+    target: null
+
+hard_equality_full_population:
+  name: Hard Equal-Earth — full population
+  description: Modeled per-person distribution that preserves national income while including children.
+  redistribution:
+    type: equal
+    target_multiplier: 1.0
+  classification:
+    unchanged_tolerance: 0.0
+  population:
+    basis: full_population
+  year:
+    target: null
+
+relaxed_06_30_full_population:
+  name: Relaxed Equal-Earth (0.6E–3E) — full population
+  description: Diagnostic modeled per-person floor-and-ceiling clamp; it does not promise budget balance.
+  redistribution:
+    type: clamp
+    floor_multiplier: 0.6
+    ceiling_multiplier: 3.0
+  classification:
+    unchanged_tolerance: 0.0
+  population:
+    basis: full_population
+  year:
+    target: null
+
+global_median_target:
+  name: Global median target - adults
+  description: Every adult receives the population-weighted world median percentile-bin income.
+  reference: {scope: global, statistic: median}
+  redistribution: {type: equal, target_multiplier: 1.0}
+  classification: {unchanged_tolerance: 0.0}
+  population: {basis: adult_20_plus}
+  year: {target: null}
+
+global_median_target_full_population:
+  name: Global median target - full population
+  description: Every modeled person receives the population-weighted world median modeled income.
+  reference: {scope: global, statistic: median}
+  redistribution: {type: equal, target_multiplier: 1.0}
+  classification: {unchanged_tolerance: 0.0}
+  population: {basis: full_population}
+  year: {target: null}
+
+national_mean_equalization:
+  name: National-mean equalization - adults
+  description: Every adult receives the mean income of their own country.
+  reference: {scope: national, statistic: mean}
+  redistribution: {type: equal, target_multiplier: 1.0}
+  classification: {unchanged_tolerance: 0.0}
+  population: {basis: adult_20_plus}
+  year: {target: null}
+
+national_mean_equalization_full_population:
+  name: National-mean equalization - full population
+  description: Every modeled person receives the mean modeled income of their own country.
+  reference: {scope: national, statistic: mean}
+  redistribution: {type: equal, target_multiplier: 1.0}
+  classification: {unchanged_tolerance: 0.0}
+  population: {basis: full_population}
+  year: {target: null}

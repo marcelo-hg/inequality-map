@@ -1,0 +1,26 @@
+start_year: 2000
+end_year: null  # resolved to current year and frozen in each download manifest
+workers: 4
+attempts: 3
+timeout_seconds: 90
+wid:
+  base_url: https://wid.world/bulk_download/
+  dataset: WID bulk country exports
+  documentation: https://wid.world/codes-dictionary/
+  license: null  # preserve upstream documentation; do not infer redistribution rights
+  citation: World Inequality Database, WID.world; see series-level source citations.
+  variables: [aptinc992j, sptinc992j, tptinc992j, npopul992i, npopul999i, anninc992i, anninc999i, mnninc999i, inyixx999i, xlcusp999i]
+world_bank:
+  base_url: https://api.worldbank.org/v2/
+  dataset: World Development Indicators
+  documentation: https://datahelpdesk.worldbank.org/knowledgebase/articles/889392
+  license: null
+  citation: World Bank, World Development Indicators; see indicator source notes.
+  indicators: [SP.POP.TOTL, PA.NUS.PPP]
+  per_page: 10000
+natural_earth:
+  dataset: Natural Earth 110m Admin 0 Countries
+  boundary_url: https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_admin_0_countries.geojson
+  documentation: https://www.naturalearthdata.com/downloads/110m-cultural-vectors/110m-admin-0-countries/
+  license: public_domain
+  citation: Natural Earth, 1:110m Cultural Vectors, Admin 0 – Countries.

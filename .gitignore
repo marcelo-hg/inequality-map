@@ -216,3 +216,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Reproducible analytical data; keep code/configuration and small reports in Git.
+data/raw/
+data/interim/
+data/processed/
+database/current.json
+*.duckdb
+*.duckdb.wal
